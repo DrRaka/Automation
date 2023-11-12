@@ -59,4 +59,12 @@ export default class MainContainerAccountPanel extends BasePageObject{
         return MyAccountPage.init();
     }
 
+    async clickLoginButtonVoid(){
+        await this.loginButton.click();
+    }
+
+    async isErrorVisible(){
+        return await this.isElementPresent(`.//div[contains(@class, 'alert-danger')]`);
+    }
+
 }

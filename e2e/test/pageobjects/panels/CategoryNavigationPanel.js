@@ -1,4 +1,6 @@
 import BasePageObject from "../base/BasePageObject.js";
+import LoginPage from "../LoginPage.js";
+import LandingPage from "../LandingPage.js";
 
 export default class CategoryNavigationPanel extends BasePageObject{
 
@@ -28,6 +30,11 @@ export default class CategoryNavigationPanel extends BasePageObject{
             this.hairCategory.waitForClickable(),
             this.booksCategory.waitForClickable(),
         ])
+    }
+
+    async clickHomeButton(){
+        await this.homeCategory.click();
+        return await LandingPage.init();
     }
 
 

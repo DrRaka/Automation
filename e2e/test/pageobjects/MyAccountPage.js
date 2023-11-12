@@ -28,4 +28,12 @@ export default class MyAccountPage extends BasePageObject{
         this.footerPanel = await FooterPanel.init();
     }
 
+    async getMainNavigationPanel(){
+        return await MainNavigationPanel.init();
+    }
+
+    async getCategoryNavigationPanel(){
+        return await CategoryNavigationPanel.init();
+    }
+
 }
